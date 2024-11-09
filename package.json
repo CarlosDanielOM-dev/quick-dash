@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "@osten-moove/quick-dash",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev --parallel",
+    "build": "turbo build"
+  },
+  "packageManager": "npm@10.8.2",
+  "devDependencies": {
+    "turbo": "2.2.3"
+  }
+}
