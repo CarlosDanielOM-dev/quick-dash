@@ -5,11 +5,12 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build-react": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
     "storybook": "storybook dev -p 6006",
     "deploy:storybook": "storybook-to-ghpages",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "npm run build-react && npm run build-storybook"
   },
   "keywords": [],
   "author": "",
