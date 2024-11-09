@@ -2,7 +2,7 @@
 
 ## Grafics
 
-[X] - Line Chart
-[X] - Pie Chart
-[X] - Table
+[X] - Line Chart <br>
+[X] - Pie Chart <br>
+[X] - Table <br>
 [X] - Bar Chart
