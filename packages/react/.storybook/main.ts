@@ -27,5 +27,12 @@ const config: StorybookConfig = {
       disable: true,
     },
   },
+  viteFinal: (config, { configType }) => {
+    if (configType === "PRODUCTION") {
+      config.base = "/quick-dash/";
+    }
+
+    return config;
+  },
 };
 export default config;
