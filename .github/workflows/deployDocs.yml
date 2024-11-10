@@ -15,6 +15,9 @@ jobs:
         with:
           node-version: 20
 
+      - run: npm ci
+      - run: npm run build
+
       - name: Deploy storybook
         working-directory: ./packages/react
         run: npm run deploy:storybook -- --ci --existing-output-dir=storybook-static
