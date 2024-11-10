@@ -2,8 +2,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - main
-
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,13 +13,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16
-
-      - run: npm ci
-      - run: npm run build
+          node-version: 18
 
       - name: Deploy storybook
         working-directory: ./packages/react
         run: npm run deploy:storybook -- --ci --existing-output-dir=storybook-static
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
